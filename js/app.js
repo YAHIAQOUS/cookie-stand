@@ -7,21 +7,23 @@ let dailyHours = [];
 for (let i = 6; i < 12; i++) {
     dailyHours.push(`${i}am`);
 }
-// console.log(dailyHours);
+
 
 dailyHours.push(`12pm`)
 
 for (let i = 1; i < 9; i++) {
     dailyHours.push(`${i}pm`);
 }
-// console.log(dailyHours);
+
 
 
 
 // function from w3 schooles to get random number
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.round(Math.random() * (max - min)) + min;
 }
+
+
 
 
 // First Object
@@ -39,13 +41,14 @@ let seattle = {
             randomCustomers = randomNumber(this.minCustomersHour, this.maxCustomersHour);
             totalCustomers.push(randomCustomers);
         }
+        
 
 
         // get hourly cookies
         let hourlyCookies = 0;
         let totalCookies = [];
         for (let i = 0; i < dailyHours.length; i++) {
-            hourlyCookies = totalCustomers[i] * this.avgCookieCustomer;
+            hourlyCookies = Math.round(totalCustomers[i] * this.avgCookieCustomer);
             totalCookies.push(hourlyCookies);
         }
 
@@ -108,7 +111,7 @@ let tokyo = {
         let hourlyCookies = 0;
         let totalCookies = [];
         for (let i = 0; i < dailyHours.length; i++) {
-            hourlyCookies = totalCustomers[i] * this.avgCookieCustomer;
+            hourlyCookies = Math.round(totalCustomers[i] * this.avgCookieCustomer);
             totalCookies.push(hourlyCookies);
         }
 
@@ -170,7 +173,7 @@ let dubai = {
         let hourlyCookies = 0;
         let totalCookies = [];
         for (let i = 0; i < dailyHours.length; i++) {
-            hourlyCookies = totalCustomers[i] * this.avgCookieCustomer;
+            hourlyCookies = Math.round(totalCustomers[i] * this.avgCookieCustomer);
             totalCookies.push(hourlyCookies);
         }
 
@@ -231,7 +234,7 @@ let paris = {
         let hourlyCookies = 0;
         let totalCookies = [];
         for (let i = 0; i < dailyHours.length; i++) {
-            hourlyCookies = totalCustomers[i] * this.avgCookieCustomer;
+            hourlyCookies = Math.round(totalCustomers[i] * this.avgCookieCustomer);
             totalCookies.push(hourlyCookies);
         }
 
@@ -293,7 +296,7 @@ let lima = {
         let hourlyCookies = 0;
         let totalCookies = [];
         for (let i = 0; i < dailyHours.length; i++) {
-            hourlyCookies = totalCustomers[i] * this.avgCookieCustomer;
+            hourlyCookies = Math.round(totalCustomers[i] * this.avgCookieCustomer);
             totalCookies.push(hourlyCookies);
         }
 
