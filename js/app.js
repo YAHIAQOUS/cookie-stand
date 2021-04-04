@@ -14,7 +14,7 @@ dailyHours.push(`12pm`)
 for (let i = 1; i < 9; i++) {
     dailyHours.push(`${i}pm`);
 }
-console.log(dailyHours);
+// console.log(dailyHours);
 
 
 
