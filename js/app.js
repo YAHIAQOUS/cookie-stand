@@ -81,7 +81,7 @@ Store.prototype.avgCookiesHour = function () {
         totalCookiesPerHour[i] += this.totalCookies[i];
     }
     // console.log(this.totalCookies);
-    // console.log(totalCookiesPerHour);
+    console.log(totalCookiesPerHour);
 
 
     // get sum of cookies
@@ -123,6 +123,7 @@ function header() {
     headingRow.appendChild(headingDataTotal);
     headingDataTotal.textContent = 'Daily Location Total'
 }
+header();
 
 
 
@@ -146,6 +147,14 @@ function rows() {
         rowTotal.textContent = this.sum;
     }
 }
+rows();
+
+// Calling function methods
+for (let i = 0; i < stores.length; i++) {
+    stores[i].avgCookiesHour();
+    stores[i].render();
+}
+
 
 
 // get mega totals
@@ -153,7 +162,7 @@ let megaTotals = 0
 for (let i = 0; i < dailyHours.length; i++) {
     megaTotals += totalCookiesPerHour[i];
 }
-// console.log(megaTotals);
+console.log(megaTotals);
 
 
 // Making Footer
@@ -175,17 +184,13 @@ function footer() {
     footerRow.appendChild(footerDataTotal);
     footerDataTotal.textContent = megaTotals
 }
-
-header();
-rows();
-
-// Calling function methods
-for (let i = 0; i < stores.length; i++) {
-    stores[i].avgCookiesHour();
-    stores[i].render();
-}
-
 footer();
+
+
+
+
+
+
 
 // console.log(parent);
 
