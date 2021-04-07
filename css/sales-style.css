@@ -2,8 +2,12 @@ table,th,td {
     border: solid black 1px;
     border-collapse: collapse;
     padding: 10px;
+    margin: 15px;
   }
 
-
-
-  
+#div1{
+  border: solid black 1px;
+  margin: 15px;
+  width: 50%;
+  padding: 10px;
+}
